@@ -1,0 +1,21 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <item
+        android:id="@+id/menu_cancel_annotate"
+        android:orderInCategory="1"
+        android:showAsAction="never"
+        android:title="@string/menu_cancel"/>
+    
+    <item
+        android:id="@+id/menu_reset_annotate"
+        android:orderInCategory="2"
+        android:showAsAction="never"
+        android:title="@string/menu_reset" />
+    
+    <item
+        android:id="@+id/menu_save_annotate"
+        android:orderInCategory="3"
+        android:showAsAction="never"
+        android:title="@string/menu_save" />
+    
+</menu>

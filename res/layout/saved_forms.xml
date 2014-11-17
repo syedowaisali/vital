@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg"
+    tools:context=".MainActivity" >
+	
+    <!--  Head -->
+    <RelativeLayout
+        android:id="@+id/head"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" >
+        
+        <!-- Top Bar -->
+	    <RelativeLayout
+	        android:id= "@+id/header_bar"
+	        android:layout_width="fill_parent"
+	        android:layout_height="wrap_content"
+	        android:background="@drawable/bar_bg"  >
+			
+	        <ImageView
+	            android:id="@+id/logo"
+	            android:layout_width="fill_parent"
+	            android:layout_height="wrap_content"
+	            android:layout_marginTop="10dp"
+	            android:scaleType="center"
+	            android:src="@drawable/logo" />
+	        
+	        <ImageView
+	            android:id="@+id/icon_help"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:layout_alignParentRight="true"
+	            android:layout_marginTop="10dp"
+	            android:layout_marginRight="10dp"
+	            android:onClick="showHelp"
+	            android:clickable="true"
+	            android:layout_gravity="right"
+	            android:src="@drawable/help" />
+	
+	    </RelativeLayout><!-- End Top Bar -->
+	    
+	    
+	    
+	</RelativeLayout><!-- End Head -->
+    
+    <RelativeLayout
+        android:id="@+id/menu_box"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@id/head"
+        android:layout_centerHorizontal="true" >
+
+        <ScrollView
+            android:id="@+id/scrollView1"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent" >
+
+            <LinearLayout
+                android:id="@+id/saved_forms_wrapper"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="10dp"
+                android:orientation="vertical" >
+				<!-- 
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:orientation="horizontal"
+                    android:background="#fff" >
+                    
+                    <ImageView
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:src="@drawable/vital_small_logo" />
+                    
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp"
+                        android:text="Ahemd Super Store" />
+                    
+                </LinearLayout>
+                -->
+                
+            </LinearLayout>
+            
+        </ScrollView>
+        <!-- 
+        <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="No Forms"
+                    android:layout_centerInParent="true"
+                    android:textColor="#fff"
+                    android:textSize="20sp" />   -->
+    </RelativeLayout>
+ 	
+</RelativeLayout>

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Vital</string>
+    <string name="action_settings">Settings</string>
+    <string name="hello_world">Hello world!</string>
+	
+    <!-- Menu Strings -->
+    <string name="form_menu_title">Forms</string>
+    <string name="contacts_menu_title">Contacts</string>
+    <string name="calendar_menu_title">Calendar</string>
+    <string name="reminders_menu_title">Reminders</string>
+    <string name="display_menu_title">Display\nChecker</string>
+    <string name="location_tracker_menu_title">Location\nTracker</string>
+    
+    <!-- Prompt -->
+    <string name="brand_prompt">Select a Brand</string>
+    
+    <!-- Buttons -->
+    <string name="save_btn">Save</string>
+    <string name="submit_btn">Submit</string>
+    
+    <!-- Hints -->
+    <string name="store_name">Store Name</string>
+    <string name="city">City</string>
+    <string name="notes">Notes</string>
+    
+    <!-- Menu -->
+    <string name="menu_cancel">Cancel</string>
+    <string name="menu_reset">Reset</string>
+    <string name="menu_save">Save</string>
+    <string name="menu_annotate_image">Edit Photo</string>
+    <string name="menu_saved_forms">Saved Froms</string>
+    <string name="submit_all">Submit All</string>
+    
+    <!-- Info -->
+    <string name="imei_number">IMEI Number</string>
+	<string name="sim_serial">SIM Serial Number</string>
+	<string name="internet_status">Internet Status</string>
+	<string name="gps_status">GPS Status</string>
+	<string name="connect">Connect</string>
+	<string name="verify_again">Verify Again</string>
+    
+</resources>

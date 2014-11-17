@@ -1,0 +1,287 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg"
+    tools:context=".MainActivity" >
+	
+    <!--  Head -->
+    <RelativeLayout
+        android:id="@+id/head"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" >
+        
+        <!-- Top Bar -->
+	    <RelativeLayout
+	        android:id= "@+id/header_bar"
+	        android:layout_width="fill_parent"
+	        android:layout_height="wrap_content"
+	        android:background="@drawable/bar_bg"  >
+			
+	        <ImageView
+	            android:id="@+id/logo"
+	            android:layout_width="fill_parent"
+	            android:layout_height="wrap_content"
+	            android:layout_marginTop="10dp"
+	            android:scaleType="center"
+	            android:src="@drawable/logo" />
+	        
+	        <ImageView
+	            android:id="@+id/icon_help"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:layout_alignParentRight="true"
+	            android:layout_marginTop="10dp"
+	            android:layout_marginRight="10dp"
+	            android:onClick="showHelp"
+	            android:clickable="true"
+	            android:layout_gravity="right"
+	            android:src="@drawable/help" />
+	
+	    </RelativeLayout><!-- End Top Bar -->
+	    
+	    <!-- User Bar -->
+		<RelativeLayout
+		    android:id="@+id/user_bar"
+		    android:layout_width="fill_parent"
+		    android:layout_height="wrap_content"
+		    android:layout_centerHorizontal="true"
+		    android:layout_below="@id/header_bar" >
+		    
+		    <LinearLayout
+		        android:id="@+id/user_bar_block"
+		        android:layout_width="fill_parent"
+		        android:layout_height="wrap_content"
+		        android:orientation="horizontal">
+		        
+		        <!-- User Image -->
+		        <ImageView
+		            android:id="@+id/user_img"
+		            android:layout_width="50dp"
+		            android:layout_height="50dp"
+		            android:layout_marginLeft="10dp"
+		            android:layout_marginTop="10dp" />
+		        
+		        <!-- User Name -->
+		        <TextView
+		            android:id="@+id/user_name"
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:textColor="#ffffff"
+		            android:textSize="14sp"
+		            android:layout_marginLeft="10dp"
+		            android:layout_marginTop="27dp"
+		            android:text="" />
+		        
+		    </LinearLayout>
+		    
+		</RelativeLayout><!-- End User Bar -->
+	    
+	</RelativeLayout><!-- End Head -->
+    
+    <RelativeLayout
+        android:id="@+id/menu_box"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="60dp"
+        android:layout_below="@id/head">
+        
+        <LinearLayout
+            android:id="@+id/menu_row_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_centerHorizontal="true">
+            
+            <!-- Form Icon Block -->
+            <LinearLayout
+                android:id="@+id/menu_form_block"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:onClick="showForm"
+                android:padding="20dp"
+	            android:clickable="true"
+	            android:visibility="gone"
+                android:orientation="vertical" >
+                
+                <ImageView
+		            android:id="@+id/icon_forms"
+		            android:layout_width="60dp"
+		            android:layout_height="60dp"
+		            android:src="@drawable/forms_icon" />
+                
+                <TextView
+                    android:id="@+id/icon_form_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="#ffffff"
+                    android:textSize="14sp"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="8dp"
+                    android:text="@string/form_menu_title" />
+                
+            </LinearLayout>
+            
+	        <!-- Contacts Icon Block -->
+            <LinearLayout
+                android:id="@+id/menu_contacts_block"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+				android:padding="20dp"
+		        android:visibility="gone"
+                android:orientation="vertical" >
+                
+                <ImageView
+		            android:id="@+id/icon_contacts"
+		            android:layout_width="60dp"
+		            android:layout_height="60dp"
+		            android:src="@drawable/contacts_icon" />
+                
+                <TextView
+                    android:id="@+id/icon_contacts_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="#ffffff"
+                    android:textSize="14sp"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="8dp"
+                    android:text="@string/contacts_menu_title" />
+                
+            </LinearLayout>
+            
+            <!-- Calendar Icon Block -->
+	        <LinearLayout
+                android:id="@+id/menu_calendar_block"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:onClick="showCal"
+	            android:clickable="true"
+	            android:padding="20dp"
+	            android:visibility="gone"
+                android:orientation="vertical" >
+                
+                <ImageView
+		            android:id="@+id/icon_calendar"
+		            android:layout_width="60dp"
+		            android:layout_height="60dp"
+		            android:src="@drawable/calendar_icon" />
+                
+                <TextView
+                    android:id="@+id/icon_calendar_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="#ffffff"
+                    android:textSize="14sp"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="8dp"
+                    android:text="@string/calendar_menu_title" />
+                
+            </LinearLayout>
+
+        </LinearLayout>
+        
+       <LinearLayout
+            android:id="@+id/menu_row_2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_below="@id/menu_row_1"
+            android:layout_centerHorizontal="true">
+            
+           <!-- Reminders Icon Block -->
+           <LinearLayout
+                android:id="@+id/menu_reminders_block"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:visibility="gone"
+                android:padding="20dp"
+                android:orientation="vertical" >
+                
+               <ImageView
+		            android:id="@+id/icon_reminders"
+		            android:layout_width="60dp"
+		            android:layout_height="60dp"
+		            android:src="@drawable/reminders_icon" />
+               
+                <TextView
+                    android:id="@+id/icon_reminders_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="#ffffff"
+                    android:textSize="14sp"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="8dp"
+                    android:text="@string/reminders_menu_title" />
+                
+            </LinearLayout>
+            
+           <!-- Display Icon Block -->
+           <!-- 
+	        <LinearLayout
+                android:id="@+id/menu_display_block"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="40dp"
+                android:orientation="vertical" >
+                
+                <ImageView
+		            android:id="@+id/icon_display"
+		            android:layout_width="60dp"
+		            android:layout_height="40dp"
+		            android:src="@drawable/display_icon" />
+               
+               
+                <TextView
+                    android:id="@+id/icon_display_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="#ffffff"
+                    android:textSize="14sp"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="8dp"
+                    android:text="@string/display_menu_title" />
+                
+            </LinearLayout>
+             -->
+	        <!-- Location Tracker Icon Block -->
+	        <LinearLayout
+                android:id="@+id/menu_location_tracker_block"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:padding="20dp"
+                android:onClick="showLocationTracker"
+	            android:clickable="true"
+	            android:visibility="gone"
+                android:orientation="vertical" >
+                
+                <ImageView
+		            android:id="@+id/icon_location_tracker"
+		            android:layout_width="60dp"
+		            android:layout_height="40dp"
+		            android:src="@drawable/tracker_icon" />
+               
+               
+                <TextView
+                    android:id="@+id/icon_location_tracker_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="#ffffff"
+                    android:textSize="14sp"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="8dp"
+                    android:text="@string/location_tracker_menu_title" />
+                
+            </LinearLayout>
+            
+        </LinearLayout>
+        
+    </RelativeLayout>
+ 	
+</RelativeLayout>
